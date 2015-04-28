@@ -36,7 +36,7 @@ rm lib/less/*.less* lib/js/*.js lib/fonts/*
 echo "copy files from bootstrap installation..."
 cp $BOOTSTRAP_ROOT/js/*.js lib/js
 cp $BOOTSTRAP_ROOT/fonts/* lib/fonts
-cp $BOOTSTRAP_ROOT/less/* lib/less
+cp -r $BOOTSTRAP_ROOT/less/* lib/less
 # versions of meteor after v0.7.0.1 (excluding) want .import.less instead of .lessimport
 rename "s/\\.less/\\.import.less/" lib/less/*.less
 
